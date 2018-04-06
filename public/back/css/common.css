@@ -1,6 +1,139 @@
+html, body{
+  height: 100%;
+  width: 100%;
+}
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.red{
+  color: #A94442;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+/*登录功能开始*/
 .body_bg{
   background-color: #222D32;
 }
 .m-top{
   margin-top:150px;
 }
+
+/*登录功能结束*/
+
+/*首页功能开始*/
+.lt-aside{
+  width: 180px;
+  height:100%;
+  position: fixed;
+  left: 0;
+  top:0;
+  z-index: 999;
+  transition: all 1s;
+
+}
+.lt-aside.hidemeun{
+  left: -180px;
+}
+.lt-aside .brand{
+  width: 100%;
+  height: 50px;
+  line-height:50px;
+  background-color: #367FA9;
+  text-align: center;
+}
+.lt-aside .brand a{
+  font-size:24px;
+  color: #fff;
+}
+.lt-aside .user{
+  width: 180px;
+  height: 180px;
+  padding-top: 30px;
+}
+.lt-aside .user img{
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.lt-aside .user p{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size:16px;
+  color: #fff;
+}
+
+.aside-nav a{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  font-size:14px;
+  color: #fff;
+  display:block;
+  border-left:3px solid transparent;
+}
+.aside-nav a.active{
+  background-color: #1D1F21;
+  border-left:3px solid #006699;
+}
+.aside-nav a i{
+  margin-right: 5px;
+}
+.aside-nav .child a{
+  width: 100%;
+  height: 40px;
+  line-height:40px;
+  display: block;
+  padding-left: 40px;
+
+}
+
+.aside-nav .child{
+  display: none;
+}
+.lt-header{
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  background-color: #3C8DBC;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-left: 180px;
+  transition: all 1s;
+}
+.lt-header.hidemeun{
+  padding-left: 0px;
+}
+.lt-header a{
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+.lt-main{
+  padding-left: 180px;
+  padding-top: 50px;
+  width: 100%;
+  height: 1000px;
+  transition: all 1s;
+}
+.lt-main.hidemeun{
+  padding-left: 0;
+}
+
+.breadcrumb{
+  margin-top: 20px;
+}
+/*首页功能开始*/
