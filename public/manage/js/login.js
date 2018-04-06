@@ -102,6 +102,7 @@ $(function() {
   // 3. 重置表单功能
   $("[type='reset']").on("click", function( e ) {
     // resetForm 传 true 表示不仅验证重置, 表单内容也重置
-    $("#form").data('bootstrapValidator').resetForm(true);
+    $("#form").data('bootstrapValidator').resetForm();
+
   })
 })
