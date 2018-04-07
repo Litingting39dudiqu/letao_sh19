@@ -136,4 +136,14 @@ a:active {
 .breadcrumb{
   margin-top: 20px;
 }
+
+.echarts_1,.echarts_2{
+  width: 48%;
+  height: 400px;
+}
+
+
 /*首页功能开始*/
+
+/*用户页面功能开始*/
+/*用户页面功能结束*/
