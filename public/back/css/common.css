@@ -81,7 +81,7 @@ a:active {
   display:block;
   border-left:3px solid transparent;
 }
-.aside-nav a.active{
+.aside-nav li a.active{
   background-color: #1D1F21;
   border-left:3px solid #006699;
 }
@@ -158,3 +158,10 @@ td{
   vertical-align: middle;
 }
 /*用户页面功能结束*/
+
+
+/*一级分类功能页面*/
+
+#addBtn{
+  margin-bottom: 20px;
+}
