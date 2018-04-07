@@ -146,4 +146,15 @@ a:active {
 /*首页功能开始*/
 
 /*用户页面功能开始*/
+th,td{
+text-align: center;
+}
+td{
+  height: 50px;
+}
+
+.table>tbody>tr>th,
+.table tbody tr td{
+  vertical-align: middle;
+}
 /*用户页面功能结束*/
