@@ -1,7 +1,15 @@
 /**
  * Created by Administrator on 2018/4/7 0007.
  */
-$(function () {
+//<script src="lib/jquery/jquery.min.js"></script>
+//  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+//  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+//  <script src="lib/nprogress/nprogress.js"></script>
+//  <script src="lib/artTemplate/template-web.js"></script>
+//  <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+//  <script src="js/common.js"></script>
+require(['jquery','template','bootstrap','bootstrapValidator','bootstrapPaginator','common'],function($,template){
+
   var currentPage = 1;
   var pageSize = 5;
   render();

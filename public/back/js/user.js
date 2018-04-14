@@ -1,7 +1,18 @@
 /**
  * Created by Administrator on 2018/4/7 0007.
  */
-$(function () {
+
+//<script src="lib/jquery/jquery.min.js"></script>
+//  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+//  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+//  <script src="lib/nprogress/nprogress.js"></script>
+//  <script src="lib/artTemplate/template-web.js"></script>
+//  <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+//  <script src="js/common.js"></script>
+
+require(['jquery','template','bootstrap','bootstrapValidator','bootstrapPaginator','common'],function($,template){
+
+
   var currentPage = 1;
   var pageSize = 5;
   render();
@@ -23,7 +34,7 @@ $(function () {
         $("#paginator").bootstrapPaginator({
           bootstrapMajorVersion: 3,
           //关联当前页
-          currentPage: currentPage,
+          currentPage: info.page,
           //总页数
           totalPages: Math.ceil(info.total / info.size),
           //点击当前页，重新渲染
@@ -35,8 +46,9 @@ $(function () {
 
         //给按钮注册委托点击事件
         $(".table tbody").on("click",".btn",function(){
+          console.log("hhh")
           //模态框显示
-         $("#userModal").modal("show")
+          $("#userModal").modal("show")
           //获取按钮的id
           var id = $(this).parent().data('id');
           //判断按钮的颜色，有就禁用，没有启用
@@ -64,4 +76,5 @@ $(function () {
       }
     })
   }
+
 })

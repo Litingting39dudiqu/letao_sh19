@@ -90,22 +90,28 @@
         <form id="form">
           <div class="form-group">
             <div class="dropdown">
-              <button type="button"  class="btn btn-default dropdown-toggle">
-                <span>请选择一个一级分类</span>
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                <span id="dropdownText">请选择一个一级分类</span>
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li>女士官</li>
+                <li><a href="#">女士管</a></li>
               </ul>
             </div>
-            <input type="text" name="categoryId">
-            <input type="text" name="hot" value="1">
+            <input type="hidden" name="categoryId">
+            <input type="hidden" name="hot" value="1">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control"  placeholder="请输入二级分类" name="categoryName">
+            <input type="text" class="form-control" placeholder="请输入二级分类" name="brandName">
           </div>
           <div class="form-group">
-
+            <label class="btn btn-default" for="fileupload">上传图片</label>
+            <input type="file" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic"
+                   style="display:none">
+          </div>
+          <div class="form-group">
+            <img src="images/none.png" width="100" id="imgBox">
+            <input type="hidden" name="brandLogo">
           </div>
         </form>
       </div>
@@ -119,14 +125,10 @@
 </div>
 
 
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-<script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/artTemplate/template-web.js"></script>
-<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
-<script src="js/common.js"></script>
+<script src="lib/require.js"></script>
+<script src="js/config.js"></script>
 <script src="js/second.js"></script>
+
 <script type="text/template" id="tmp">
   {{each rows v i}}
   <tr>
@@ -135,6 +137,13 @@
     <td>{{v.brandName}}</td>
     <td><img src="{{v.brandLogo ? v.brandLogo:'images/none.png'}}" width="100"></td>
   </tr>
+  {{/each}}
+</script>
+
+<!--下拉菜单渲染-->
+<script type="text/template" id="tmp-down">
+  {{each rows v i}}
+  <li><a href="#" data-id={{v.id}}>{{v.categoryName}}</a></li>
   {{/each}}
 </script>
 </body>

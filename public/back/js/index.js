@@ -1,7 +1,18 @@
 /**
  * Created by Administrator on 2018/4/6 0006.
  */
-$(function(){
+//
+//<script src="lib/jquery/jquery.min.js"></script>
+//  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+//  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+//  <script src="lib/nprogress/nprogress.js"></script>
+//  <script src="lib/echarts/echarts.min.js"></script>
+//  <script src="js/common.js"></script>
+//  <script src="js/index.js"></script>
+
+require(['jquery','echarts','common'], function($,echarts){
+
+
   var echarts_1= echarts.init(document.querySelector(".echarts_1"));
   var option = {
     title: {

@@ -2,6 +2,9 @@
  * Created by Administrator on 2018/4/6 0006.
  */
 
+define(['nprogress','jquery','bootstrap'],function(NProgress,$){
+
+
 // 配置禁用小圆环
 NProgress.configure({showSpinner: false});
 // ajaxStart 所有的 ajax 开始调用
@@ -22,16 +25,6 @@ $(function () {
   $(".category").on("click", function () {
     $(this).next().slideToggle()
   })
-
-  //$(".aside-nav li a").each(function (i, v) {
-  //  $(this).on("click", function () {
-  //    $(this).addClass("active").parent().siblings().find('a').removeClass("active");
-  //
-  //  })
-  //})
-  //$(".child>a").on("click", function () {
-  //  $(this).addClass("active").siblings().removeClass("active").parents().siblings().removeClass("active")
-  //})
 
 })
 
@@ -81,3 +74,4 @@ $.ajax({
   }
 })
 }
+})
